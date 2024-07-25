@@ -1,8 +1,6 @@
-# Desarrollo del proyecto final
-
 ## Descripción del proyecto
 
-## 1. Herramientas Utilizadad
+## Herramientas Utilizadas
 
 1. Angular
 
@@ -32,31 +30,31 @@ Para realizar la instalación de angular y del proyecto  bash
 
 Página de bienvenida al usuario, aquí se implementa una vista general de la aplicación, en cuanto a inicio de sesión, compras y vista de productos.
 
-![Inicio](https://github.com/Anthonazo/ProyectoFinalPW_Collaguazo_Moya/blob/master/Imagenes/inicio.png)  
+![Inicio](https://github.com/user-attachments/assets/560f955f-f75e-4426-be30-43bcf937f8dc)
 
 En este apartado se puede observar un apartado dedicad a la visualización de la información del usuario, asi como también la opción de actualización de su información  
 
-![Informacion de cuenta](https://github.com/Anthonazo/ProyectoFinalPW_Collaguazo_Moya/blob/master/Imagenes/actualizacion%20informacion.png) 
+![Informacion de cuenta](https://github.com/user-attachments/assets/7de3978b-218c-4688-93ec-e8ad8d7195c9)
 
 Se implemento un apartado para registro de usuarios   
 
-![Registro usuarios](https://github.com/Anthonazo/ProyectoFinalPW_Collaguazo_Moya/blob/master/Imagenes/registro%20usuarios.png) 
+![Registro usuarios](https://github.com/user-attachments/assets/2dca4b71-9854-4125-9169-e850380e7dca)
 
 Una vez registrados puede iniciar sesión en su cuenta
 
-![Inicio de sesion](https://github.com/Anthonazo/ProyectoFinalPW_Collaguazo_Moya/blob/master/Imagenes/ingreso%20usuarios.png)
+![Inicio de sesion](https://github.com/user-attachments/assets/484e9ee7-a4f1-407b-969d-3c407fde1600)
 
 De igual manera se aplicó un carrito de compra que va a contener todos los productos que se van a comprar
 
-![Carrito](https://github.com/Anthonazo/ProyectoFinalPW_Collaguazo_Moya/blob/master/Imagenes/carrito.png)
+![Carrito](https://github.com/user-attachments/assets/d8feba19-baad-46c5-bd4d-7083d70defd8)
 
 Además de agrego un apartado que permita ingresar la ubicación e información extra del usuario
 
-![Inforamcion extra](https://github.com/Anthonazo/ProyectoFinalPW_Collaguazo_Moya/blob/master/Imagenes/ubicacion%20datos.png)
+![Inforamcion extra](https://github.com/user-attachments/assets/540889e2-7cd1-440e-b0aa-f0b1598d5a7d)
 
 Finalmente se obtiene la factura generada y correspondiente al usuario quien la compro
 
-![Factura](https://github.com/Anthonazo/ProyectoFinalPW_Collaguazo_Moya/blob/master/Imagenes/factura.png)
+![Factura](https://github.com/user-attachments/assets/f21cc52a-b601-4a74-95ce-faab84e681d3)
 
 Cabe recalcar que esta aplicación es responsiva y se puede adaptar a distintos dispositivos.
 
