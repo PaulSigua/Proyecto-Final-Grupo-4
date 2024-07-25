@@ -1,0 +1,36 @@
+<div class="precio-container">
+  <div class="descripcion-precio-container">
+    <div class="subtotal">
+      <span>Subtotal</span>
+      <span>${{precioTotal}}.00</span>
+    </div>
+    <div class="costo-envio">
+      <span>Precio IVA</span>
+      <span>${{iva | number:'1.2-2' }}</span>
+    </div>
+  </div>
+  <div class="ofertas-cliente">
+    <label>
+      <input type="checkbox" [(ngModel)]="direccionConfirmada"> Confirmo que la dirección es 100% correcta. No responsabilizo a Tech Shop por ingreso de direcciones incorrectas. *
+    </label>
+    <label>
+      <input type="checkbox" [(ngModel)]="aceptaPromociones"> Autorizo a Tech Shop a enviar promociones a mi email.
+    </label>
+  </div>
+  <div class="verificar-container">
+    <button class="verificar-button" (click)="onButtonPress()">Pedir | ${{ total  | number:'1.2-2' }}</button>
+  </div>
+
+  <div class="pago-seguro">
+    <div class="inf">
+      <p>PAGO SEGURO PATROCINADO POR: </p>
+    </div>
+    <div class="container-span">
+      <div><img src="/assets/icons/mastercard.svg" alt="mastercard"></div>
+      <div><img src="/assets/icons/visa.svg" alt="visa"></div>
+      <div><img src="/assets/icons/bitcoin.svg" alt="bitcoin" class="bitcoin"></div>
+      <div><img src="/assets/icons/gpay.svg" alt="visa"></div>
+    </div>
+
+  </div>
+</div>

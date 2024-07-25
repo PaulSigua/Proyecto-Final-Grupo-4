@@ -1,0 +1,47 @@
+<div class="global-container">
+    <div class="container">
+        <div class="inicio-container">
+            <div class="logo-container">
+                <hr>
+                <img src="assets\logo\logo-ferreteria.png" alt="logo">
+                <hr>
+            </div>
+            <div class="saludo-container">
+                <h1> ¡Genial! <br> Ingresa tus datos </h1>
+            </div>
+        </div>
+        <div class="formulario-container">
+            <form action="">
+                <div class="nom">
+                    <label for="nombre"> Nombre </label>
+                    <input type="text" name="nombre" id="nombre" [(ngModel)]="cliente.primerNombre" required="">
+                </div>
+
+                <div class="ap">
+                    <label for="apellido"> Apellido </label>
+                    <input type="text" name="apellido" id="apellido" [(ngModel)]="cliente.primerApellido">
+                </div>
+
+                <div class="email">
+                    <label for="mail"> Email </label>
+                    <input type="email" name="mail" id="mail" [(ngModel)]="cliente.correo">
+                </div>
+
+                <div class="contasena">
+                    <label for="con"> Contraseña </label>
+                    <input type="password" name="con" id="con" [(ngModel)]="cliente.contrasenia">
+                </div>
+
+                <div class="contasena-conf">
+                    <label for="con-conf"> Confirmar Contraseña </label>
+                    <input type="password" name="con-conf" id="con-conf" [(ngModel)]="contrasenia">
+                </div>
+
+                <div class="botones-container">
+                    <button class="n" type="submit" (click)="ingresarCliente()">Finalizar Registro</button>
+                    <button type="submit" routerLink="/auth/ingreso">¿Ya tienes cuenta? Ingresa</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,163 @@
+.global-container {
+  padding: 20px;
+  width: 100%;
+
+  .tittle {
+    margin-left: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #C8C9CB;
+
+    h1 {
+      font-size: 20px;
+    }
+  }
+
+  .formulario {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    padding-top: 30px;
+    max-width: 100%;
+
+    .datos-cliente-formulario {
+      border-bottom: 1px solid #C8C9CB;
+      padding-bottom: 20px;
+
+    }
+
+    form {
+      margin-bottom: 20px;
+
+      .nombre,
+      .datos-extras {
+        display: flex;
+        justify-content: space-between;
+
+        >div {
+          display: flex;
+          flex-direction: column;
+          width: 48%;
+
+          label {
+            margin-bottom: 5px;
+            font-weight: 600;
+            font-size: 12px;
+          }
+
+          input[type="text"],
+          input[type="email"] {
+            border: 1px solid #F4F4F4;
+            border-radius: 4px;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      .pais-select-container,
+      .direccion-container,
+      .notas-especiales,
+      .fuera-stock {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          margin-bottom: 5px;
+          font-weight: 600;
+          font-size: 12px;
+        }
+
+        select {
+          border: 1px solid #F4F4F4;
+          border-radius: 4px;
+          padding: 10px;
+          background-color: #ffffff;
+          font-size: 16px;
+        }
+
+        input[type="text"] {
+          border: 1px solid #F4F4F4;
+          border-radius: 4px;
+          padding: 10px;
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+
+        textarea {
+          border: 1px solid #F4F4F4;
+          border-radius: 4px;
+          padding: 10px;
+          font-size: 16px;
+          resize: vertical;
+          height: 60px;
+        }
+      }
+
+      .pais-select-container,
+      .direccion-container {
+        margin-bottom: 20px;
+
+      }
+    }
+
+    .ciudad-inputs-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+
+      div {
+        width: 30%;
+
+        label {
+          margin-bottom: 5px;
+          font-weight: 600;
+          font-size: 12px;
+        }
+
+        input {
+          border: 1px solid #F4F4F4;
+          width: 100%;
+          border-radius: 4px;
+          padding: 10px;
+          font-size: 16px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .notas-especiales-formulario {
+      padding-bottom: 25px;
+      border-bottom: 1px solid #C8C9CB;
+    }
+
+    .caso-especial-formulario {
+      .fuera-stock {
+        label {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  @media(max-width: 600px) {
+    padding: 10px;
+    width: 100%;
+
+    .tittle {
+      margin-left: 10px;
+      padding-bottom: 20px;
+      margin-right: 10px;
+      margin-top: 20px;
+    }
+
+    .formulario{
+      border-bottom: 1px solid #C8C9CB;
+      border-radius: 0;
+      padding-bottom: 0px;
+    }
+  }
+}
+
+

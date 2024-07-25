@@ -1,0 +1,54 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    container_name: postgres
+    environment:
+      - POSTGRES_DB=techShopProgra
+      - POSTGRES_USER=daniel
+      - POSTGRES_PASSWORD=12345
+    networks:
+      - red
+  
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "collaguazodaniel48@gmail.com"
+      PGADMIN_DEFAULT_PASSWORD: "admin"
+    ports:
+      - "88:80"
+    depends_on:
+      - postgres
+    networks:
+      - red
+
+  techshop_api:
+    image: mateo2021/techshop_api
+    ports:
+      - "8080:8080"
+      - "9990:9990"
+    environment:
+      JAEGER_SERVICE_NAME: jaeger
+      JAEGER_AGENT_HOST: jaeger
+      JAEGER_AGENT_PORT: 6831
+      JAEGER_SAMPLER_TYPE: const
+      JAEGER_SAMPLER_PARAM: 1
+    depends_on:
+      - postgres
+    networks:
+      - red
+
+  techshop_front:
+    image: mateo2021/techshop_front
+    ports: 
+      - "4200:80"
+    networks:
+      - red
+      
+networks:
+  red:
+    driver: bridge

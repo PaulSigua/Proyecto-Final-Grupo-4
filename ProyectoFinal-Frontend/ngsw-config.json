@@ -1,0 +1,61 @@
+{
+  "$schema": "./node_modules/@angular/service-worker/config/schema.json",
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "resources": {
+        "files": [
+          "/favicon.ico",
+          "/index.html",
+          "/manifest.webmanifest",
+          "/*.css",
+          "/*.js"
+        ]
+      }
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/**",
+          "/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
+        ]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "api-cache",
+      "urls": [
+        "/facturacionTechShop/rs/clientes/**",
+        "/facturacionTechShop/rs/productos/**",
+        "/facturacionTechShop/rs/pedidos/**",
+        "/facturacionTechShop/rs/carrito/**",
+        "/facturacionTechShop/rs/carritos/**",
+        "/facturacionTechShop/rs/categorias/**",
+        "/facturacionTechShop/rs/direcciones/**",
+        "/facturacionTechShop/rs/facturas/**",
+        "/facturacionTechShop/rs/ingreso/**",
+        "/facturacionTechShop/rs/clientes/list/**",
+        "/facturacionTechShop/rs/productos/list/**",
+        "/facturacionTechShop/rs/pedidos/list/**",
+        "/facturacionTechShop/rs/carrito/list/**",
+        "/facturacionTechShop/rs/carritos/list/**",
+        "/facturacionTechShop/rs/categorias/list/**",
+        "/facturacionTechShop/rs/direcciones/list/**",
+        "/facturacionTechShop/rs/facturas/list/**",
+        "/facturacionTechShop/rs/ingreso/list/**"
+      ],
+      "cacheConfig": {
+        "maxSize": 100,
+        "maxAge": "3d",
+        "strategy": "freshness",
+        "timeout": "10s"
+      }
+    }
+  ]
+}

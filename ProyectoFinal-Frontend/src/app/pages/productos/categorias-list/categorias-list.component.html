@@ -1,0 +1,9 @@
+<div class="categorias-list">
+  <ul>
+    <li *ngFor="let cat of categorias" 
+        [class.nombre-clase-css]="cat.codigo == codigo"
+        (click)="redirectToCategory(cat.codigo)">
+      {{cat.nombre}}
+    </li>
+  </ul>
+</div>

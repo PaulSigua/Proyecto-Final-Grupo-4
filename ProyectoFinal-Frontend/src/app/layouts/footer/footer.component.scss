@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap');
+
+.global-container {
+  background-color: #444444;
+  width: 100%;
+  height: 210px;
+  color: white;
+  display: flex;
+  ;
+  flex-direction: row;
+}
+
+.logo-contacto-container,
+.tendencias-container,
+.redes-container {
+  font-family: 'Lexend', sans-serif;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+h3 {
+  margin-bottom: 8px;
+}
+
+.logo-contacto-container {
+  text-align: center;
+
+  p {
+    margin-top: 10px;
+  }
+}
+
+
+.tendencias-container {
+  li+li {
+    margin-top: 8px;
+  }
+}
+
+.redes-container ul {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+
+  li {
+    font-size: 20px;
+    margin: 0 8px;
+  }
+}
+
+a {
+  color: rgb(255, 255, 255);
+  /* Cambia 'tuColorDeseado' al color que prefieras */
+  text-decoration: none;
+  /* Elimina el subrayado predeterminado en los enlaces */
+}
+
+a:hover {
+  color: #f1f1f191;
+  /* Cambia 'tuColorDeseado' al color que prefieras */
+  text-decoration: none;
+  /* Elimina el subrayado predeterminado en los enlaces */
+}
+
+.logo-contacto-container img {
+  width: 120px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .tendencias-container {
+    display: none;
+  }
+
+  .contacto-container p {
+    font-size: 11px;
+  }
+
+  .logo-contacto-container img{
+    width: 70px;
+    margin-top: 7px;
+  }
+
+  .global-container {
+    height: 22%;
+  }
+
+}

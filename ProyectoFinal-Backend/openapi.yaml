@@ -1,0 +1,172 @@
+openapi: 3.0.3
+info:
+  title: Tech Shop API
+  description: API para la gestión de productos de Tech Shop
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080/facturacionTechShop/rs
+paths:
+  /productos:
+    get:
+      summary: Obtener producto por código
+      description: Obtiene un producto específico por su código.
+      parameters:
+        - name: codigo
+          in: query
+          required: true
+          description: Código del producto
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Producto obtenido exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Producto'
+        '404':
+          description: Producto no encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+    post:
+      summary: Crear un nuevo producto
+      description: Crea un nuevo producto en la base de datos.
+      requestBody:
+        description: Producto a crear
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Producto'
+      responses:
+        '201':
+          description: Producto creado exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+        '500':
+          description: Error interno del servidor
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+    put:
+      summary: Actualizar un producto
+      description: Actualiza un producto existente.
+      requestBody:
+        description: Producto a actualizar
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Producto'
+      responses:
+        '200':
+          description: Producto actualizado exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Producto'
+        '404':
+          description: Producto no encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+  /productos/list:
+    get:
+      summary: Obtener lista de productos
+      description: Obtiene una lista de todos los productos.
+      responses:
+        '200':
+          description: Lista de productos obtenida exitosamente
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Producto'
+        '404':
+          description: No se encontraron productos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+  /productos/ofertas:
+    get:
+      summary: Obtener productos en oferta
+      description: Obtiene una lista de productos en oferta.
+      responses:
+        '200':
+          description: Lista de productos en oferta obtenida exitosamente
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Producto'
+        '404':
+          description: No se encontraron productos en oferta
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+  /productos/buscar:
+    get:
+      summary: Buscar productos por nombre
+      description: Busca productos por nombre.
+      parameters:
+        - name: nombre
+          in: query
+          required: true
+          description: Nombre del producto
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Productos encontrados exitosamente
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Producto'
+        '404':
+          description: No se encontraron productos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+components:
+  schemas:
+    Producto:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        nombre:
+          type: string
+          example: "Producto de ejemplo"
+        descripcion:
+          type: string
+          example: "Descripción del producto de ejemplo"
+        precio:
+          type: number
+          format: float
+          example: 99.99
+        oferta:
+          type: boolean
+          example: true
+    ErrorMessage:
+      type: object
+      properties:
+        code:
+          type: integer
+          example: 99
+        message:
+          type: string
+          example: "Mensaje de error"

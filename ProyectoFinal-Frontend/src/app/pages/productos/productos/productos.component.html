@@ -1,0 +1,15 @@
+<div class="global-container">
+  <div class="categorias-container">
+    <app-categorias-list></app-categorias-list>
+  </div>
+  <div class="productos-container">
+    <div class="tittle-container">
+      <h1>{{titulo}}</h1>
+    </div>
+    <div class="container-etiquetas">
+      <div class="carta" *ngFor="let pro of productos">
+        <app-producto-card [producto]="pro"></app-producto-card>
+      </div>
+    </div>
+  </div>
+</div>

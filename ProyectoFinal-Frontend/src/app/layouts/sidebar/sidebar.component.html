@@ -1,0 +1,30 @@
+<div class="sidebar" [class.show]="sidebarActive">
+  <div class="cabecera-sidebar">
+    <div class="icon-user"><i class="fa-regular fa-user"></i></div>
+    <p>Daniel Collaguazo</p>
+    <button class="close-btn" (click)="toggleSidebar()"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="menus-container">
+    <div class="menu-superior">
+      <ul>
+        <li><a routerLink="/home">Inicio</a></li>
+      <li><a routerLink="/productos">Outlet</a></li>
+      <li><a href="/nosotros">Sobre Nosotros</a></li>
+      </ul>
+    </div>
+    <div class="menu-inferior">
+      <ul>
+        <ng-container *ngIf="verificarInformacionLocalStorage(); else cuentaNoRegistrada">
+          <li><a routerLink="/account/info">Cuenta</a></li>
+        </ng-container>
+        <ng-template #cuentaNoRegistrada>
+          <li><a routerLink="auth/ingreso">Ingresar</a></li>
+          <li><a routerLink="auth/registro">Registrarse</a></li>
+          <li><a routerLink="/account/not-logged">Cuenta</a></li>
+        </ng-template>
+      </ul>
+    </div>
+  </div>
+
+</div>
+<div class="sidebar-backdrop" *ngIf="sidebarActive" (click)="toggleSidebar()"></div>

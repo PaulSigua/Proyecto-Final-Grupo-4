@@ -1,0 +1,86 @@
+.sidebar {
+  position: fixed;
+  left: -100%;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  background: white;
+  transition: left 0.3s;
+  z-index: 100;
+}
+
+.sidebar.show {
+  left: 0;
+}
+
+.cabecera-sidebar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 5px 10px 15px 10px;
+  border-bottom: 1px solid #989595;
+
+  .icon-user {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background: #4285F4;
+  }
+
+  p {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 0px;
+  }
+
+  .close-btn {
+    color: #4285F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: #f9f9f9;
+    border: none;
+
+  }
+
+  .sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+  }
+}
+
+.menus-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+  margin: 30px 0 10px 0;
+
+  .menu-superior, .menu-inferior{
+    font-size: 20px;
+    font-weight: 500;
+    ul{
+      list-style-type: none;
+      padding-left: 7px;
+    }
+
+
+    li{
+      margin: 5px;
+
+    }
+  }
+}

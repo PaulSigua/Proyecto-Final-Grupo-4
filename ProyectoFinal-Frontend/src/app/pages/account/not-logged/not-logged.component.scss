@@ -1,0 +1,21 @@
+  .noHayInformacion {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    h1{
+        text-align: center;
+    }
+    a{
+        display: block;
+        text-decoration: none;
+        color: rgba(66, 133, 244, 1);
+        font-size: x-large;
+        margin: 10px 0px;
+    }
+    a:hover{
+        color: rgba(66, 134, 244, 0.538);
+    }
+  }

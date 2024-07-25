@@ -1,0 +1,351 @@
+.global-container {
+  width: 100%;
+}
+
+#presentacion {
+  display: none;
+}
+
+#text {
+  display: none;
+}
+
+.container-producto-inf {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 450px;
+  justify-content: space-between;
+  padding: 20px 70px 0 70px;
+  align-self: center;
+
+  .container-img {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .img-cont {
+      width: 90%;
+      height: 90%;
+      object-fit: cover;
+      object-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #F7F8FA;
+
+      img {
+        height: 90%;
+      }
+    }
+  }
+
+  .inf-producto {
+    width: 47%;
+    height: 100%;
+    padding: 20px;
+    padding-right: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .nombre-pro {
+      height: auto;
+      width: 100%;
+      text-align: start;
+
+      p {
+        font-size: 22px;
+        font-weight: bold;
+      }
+    }
+
+    .container-precio {
+      display: flex;
+      text-align: start;
+      width: 100%;
+      height: 10%;
+
+      p {
+        font-size: 26px;
+        font-weight: 600;
+        color: #4285F4;
+      }
+    }
+  }
+
+  .accion-producto {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+
+    .cantidad-container {
+      width: 15%;
+
+      p {
+        margin-bottom: 5px;
+        font-size: 18px;
+        text-align: center;
+      }
+
+      .cantidad-select {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        border: 1px solid #4285F4;
+
+        button {
+          width: 33%;
+          text-decoration: none;
+          background-color: white;
+          border: none;
+          font-size: 20px;
+          padding-bottom: 3px;
+          color: #4285F4;
+        }
+
+        input {
+          width: 33%;
+          text-align: center;
+          border: none;
+        }
+
+        input::-webkit-inner-spin-button,
+        input::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+
+    }
+
+    .agregar-producto {
+      margin-right: 50px;
+      width: 50%;
+      height: 35px;
+      align-self: center;
+      background-color: #4285F4;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+    align-self: center;
+    flex-direction: column;
+    padding: 20px;
+    padding-top: 0px;
+    height: auto;
+
+    #presentacion {
+      display: flex;
+      flex-direction: row;
+      padding-left: 0px;
+      max-width: none;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+      margin-bottom: 10px;
+
+      .cont-img {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgb(116, 116, 116);
+
+        button {
+          height: 60%;
+          width: 35px;
+          background-color: transparent;
+          border: none;
+
+          i {
+            font-size: 30px;
+            color: #4285F4;
+          }
+
+          i:hover {
+            font-size: 35px;
+          }
+        }
+      }
+
+      .imgs-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 100%;
+
+        img {
+          height: 90%;
+          margin: 5px;
+          padding: 5px;
+        }
+      }
+    }
+
+    .container-img {
+      width: 100%;
+      height: 300px;
+    }
+
+    .inf-producto {
+      width: 100%;
+      padding: 0;
+      padding-right: 0;
+
+      .nombre-pro {
+        text-align: center;
+
+        p {
+          font-weight: 600;
+          margin-bottom: 3px;
+        }
+      }
+
+      .container-precio {
+        text-align: center;
+        width: 100%;
+
+        p {
+          width: 100%;
+          margin-bottom: 3px;
+        }
+      }
+    }
+
+    .accion-producto {
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+
+      .cantidad-container {
+        width: 50%;
+        margin-bottom: 10px;
+      }
+
+      .agregar-producto {
+        margin-right: 0;
+        width: 70%;
+        height: 50px;
+      }
+    }
+  }
+}
+
+.container-imgs-prod {
+  display: flex;
+  padding-left: 80px;
+  max-width: 45%;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+
+  .cont-img {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 6px -6px #00000029;
+
+    button {
+      height: 60%;
+      width: 35px;
+      background-color: transparent;
+      border: none;
+
+      i {
+        font-size: 30px;
+        color: #4285F4;
+      }
+
+      i:hover {
+        font-size: 35px;
+      }
+    }
+  }
+
+  .imgs-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+
+    img {
+      height: 90%;
+      margin: 5px;
+      padding: 5px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+.descripcion-container {
+  padding-left: 50px;
+  padding-right: 50px;
+
+  .tittle {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 36px;
+  }
+
+  .descripcion {
+    border: 1px solid #DEDEDE;
+    padding: 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 600px) {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .tittle {
+      margin-top: 0px;
+      margin-bottom: 10px;
+
+      h1 {
+        font-size: 20px;
+      }
+
+    }
+
+  }
+}
+@media (max-width: 600px) {
+  #text {
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    p {
+      margin-bottom: 0;
+      margin-top: 10px;
+      font-size: 22px;
+      font-weight: 700;
+      padding: 0 15px 0 15px;
+    }
+  }
+}

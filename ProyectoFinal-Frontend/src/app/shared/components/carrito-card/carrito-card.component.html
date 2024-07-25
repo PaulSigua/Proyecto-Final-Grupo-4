@@ -1,0 +1,27 @@
+<div class="global-container">
+  <div class="img-container">
+    <img src={{producto?.imagen}} alt="iphone">
+  </div>
+  <div class="inf-producto-container">
+    <div class="descripcion-producto">
+      <p>
+       {{producto?.nombre}}
+      </p>
+    </div>
+    <div class="cantidad-precio-container">
+      <div class="cantidad-select">
+        <button (click)="decrement()">-</button>
+        <input type="number" name="cantidad" [(ngModel)]="cantidad" min="1" pattern="[0-9]*">
+        <button (click)="increment()">+</button>
+      </div>
+      <div class="precio-unitario">
+        <p>${{producto?.precio}}</p>
+      </div>
+      <button (click)="eliminar()" style="border: none; margin-left: 5px;"><i class="fa-regular fa-trash-can"></i></button>
+    </div>
+    <div class="precio-total">
+      <p>${{precioTotalUnitario}}</p>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,24 @@
+<header class="global-container">
+    <ng-container>
+        <h1 >Bienvenido {{string}}</h1>
+        <hr>
+        <div class="informacion-container">
+            <div>
+                <label for="nombre">Nombre </label>
+                <input type="text" id="nombre" [(ngModel)]="cliente.primerNombre">
+            </div>
+            <div>
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" [(ngModel)]="cliente.primerApellido">
+            </div>
+            <div>
+                <label for="celular">Correo</label>
+                <input type="text" id="correo" [(ngModel)]="cliente.correo">
+            </div>
+            <div class="container-buttons">
+                <button (click)="cerrarSesion()">Cerrar Sesion</button>
+                <button (click)="actualizarCliente()">Actualizar Informacion</button>
+            </div>
+        </div>
+    </ng-container>
+</header>

@@ -1,0 +1,61 @@
+<header class="global-container">
+  <div class="logo-container">
+    <div class="img-conten">
+      <a routerLink="/home"><img src="assets\logo\logo-ferreteria.png" alt="logo"></a>
+    </div>
+  </div>
+  <div class="icon-phone" (click)="openSidebar()">
+    <i class="fa-solid fa-bars" style="color: #4285f4; font-size: 25px; display: none;"></i>
+  </div>
+  <div class="buscar-container">
+    <div class="input-research">
+      <div class="select-container">
+        <i class="fa-solid fa-bars" style="color: #4285f4; font-size: 25px;"></i>
+      </div>
+      <div class="input-container">
+        <input type="text" placeholder="Buscar" [(ngModel)]="cadenaTexto" (focus)="mostrarSugerencias=true" (blur)="ocultarSugerencias()">
+        <div *ngIf="mostrarSugerencias" class="sugerencias-container">
+          <ul>
+            <li *ngFor="let sugerencia of sugerencias" (click)="seleccionarSugerencia(sugerencia)">{{sugerencia}}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="icon-container">
+        <i (click)="guardarBusqueda(cadenaTexto)" [routerLink]="['/productos/busqueda', cadenaTexto]" class="fa-solid fa-magnifying-glass" style="color: rgb(255, 255, 255);"></i>
+      </div>
+    </div>
+  </div>
+  <nav class="paginas-container">
+    <ul>
+      <ng-container *ngIf="verificarInformacionLocalStorage(); else cuentaNoRegistrada">
+        <li><a routerLink="/account/info">Cuenta</a></li>
+        <li class="separador" style="margin: 0 5px; color: #444444;">|</li>
+        <li><a routerLink="/checkout/carrito"><i class="fa-solid fa-bag-shopping fa-beat" style="color: #000000; font-size: large;"></i></a></li>
+      </ng-container>
+      <ng-template #cuentaNoRegistrada>
+        <li><a routerLink="auth/ingreso">Ingresar</a></li>
+        <li><a routerLink="auth/registro">Registrarse</a></li>
+        <li><a routerLink="/account/not-logged">Cuenta</a></li>
+        <li class="separador" style="margin: 0 5px; color: #444444;">|</li>
+        <li><a routerLink="/account/not-logged"><i class="fa-solid fa-bag-shopping fa-beat" style="color: #000000; font-size: large;"></i></a></li>
+      </ng-template>
+    </ul>
+  </nav>
+  <div class="carrito-logo">
+    <ng-container *ngIf="verificarInformacionLocalStorage(); else cuentaNoRegistrada">
+      <a routerLink="/checkout/carrito"><i class="fa-solid fa-bag-shopping fa-beat" style="color: #000000; font-size: large;"></i></a>
+    </ng-container>
+    <ng-template #cuentaNoRegistrada>
+      <a routerLink="/account/not-logged"><i class="fa-solid fa-bag-shopping fa-beat" style="color: #000000; font-size: large;"></i></a>
+    </ng-template>
+  </div>
+</header>
+<div>
+  <nav class="menu-container">
+    <ul>
+      <li><a routerLink="/home">Inicio</a></li>
+      <li><a routerLink="/productos">Outlet</a></li>
+      <li><a href="/nosotros">Sobre Nosotros</a></li>
+    </ul>
+  </nav>
+</div>

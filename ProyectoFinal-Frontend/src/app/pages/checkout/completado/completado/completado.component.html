@@ -1,0 +1,22 @@
+<div class="header">
+  <nav class="breadcrumb-container">
+    <div class="steps">
+      <div class="step">
+        <span class="icon"><i class="fa-solid fa-bag-shopping"></i></span>
+        <span class="step-name">Carrito de Compra</span>
+      </div>
+      <div class="step-divider "></div>
+      <div class="step ">
+        <span class="icon"><i class="fa-solid fa-clipboard-check"></i></span>
+        <span class="step-name">Verificación</span>
+      </div>
+      <div class="step-divider"></div>
+      <div class="step active">
+        <span class="icon carro"><i class="fa-solid fa-cart-flatbed"></i></span>
+        <span class="step-name">Orden Completa</span>
+      </div>
+    </div>
+  </nav>
+</div>
+<app-productos-container [factura]="factura"></app-productos-container>
+<app-total [factura]="factura"></app-total>

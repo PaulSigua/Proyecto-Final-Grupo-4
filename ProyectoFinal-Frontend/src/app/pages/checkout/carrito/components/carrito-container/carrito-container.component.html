@@ -1,0 +1,104 @@
+<div class="global-container">
+  <div class="header">
+    <nav class="breadcrumb-container">
+      <div class="steps">
+        <div class="step active">
+          <span class="icon"><i class="fa-solid fa-bag-shopping"></i></span>
+          <span class="step-name">Carrito de Compra</span>
+        </div>
+        <div class="step-divider "></div>
+        <div class="step ">
+          <span class="icon"><i class="fa-solid fa-clipboard-check"></i></span>
+          <span class="step-name">Verificación</span>
+        </div>
+        <div class="step-divider"></div>
+        <div class="step nada">
+          <span class="icon"><i class="fa-solid fa-cart-flatbed"></i></span>
+          <span class="step-name">Orden Completa</span>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="car-container">
+    <div class="productos-container">
+      <div class="tittle">
+        <h1>
+          Tu carrito
+        </h1>
+      </div>
+      <div class="carrito-card-container" *ngFor="let detalle of carrito?.detalles" >
+        <app-carrito-card [detalle]="detalle" (precioTotalChange)="onPrecioTotalChange($event)"></app-carrito-card>
+      </div>
+
+      <div class="indicaciones-envio-container">
+        <div class="envio">
+          <div class="titulo">
+            <p>Envio</p>
+          </div>
+          <div class="descripcion">
+            <div><i class="fa-brands fa-react"></i></div>
+            <h4>Acumula pedidos y recibe grandes ofertas.</h4>
+            <p>
+              Por cada 5 productos obtienes un cupon del 50% de descuento en toda la tienda
+            </p>
+          </div>
+        </div>
+        <div class="garantia">
+          <div class="descripcion">
+            <div><i class="fa-solid fa-award"></i></div>
+            <h4>Productos de calidad y garantia.</h4>
+            <p>
+              Nuestros productos cuentan con seguro del 100% del costo en caso de defectos.
+            </p>
+          </div>
+        </div>
+        <div class="reembolso">
+          <div class="titulo">
+            <p>Reembolso</p>
+          </div>
+          <div class="descripcion">
+            <div><i class="fa-solid fa-truck-fast"></i></div>
+            <h4>Políticas de reembolso fáciles de aplicar.</h4>
+            <p>
+              Contamos con políticas de reembolso efectivas, si no sedeas tu producto, ponte en contacto con nosotros.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="precio-container">
+      <div class="descripcion-precio-container">
+        <div class="subtotal">
+          <span>Subtotal</span>
+          <span>${{subTotal}}</span>
+        </div>
+        <div class="costo-envio">
+          <span>Precio IVA</span>
+          <span>${{iva | number:'1.2-2' }}</span>
+        </div>
+      </div>
+      <div class="ofertas-cliente">
+        <p>Obten envio gratis por compras mayores a $5000.00 </p>
+        <button>Continuar comprando</button>
+      </div>
+      <div class="verificar-container">
+        <button class="verificar-button" (click)="verficarCompra()">Verificar | ${{ total  | number:'1.2-2' }}</button>
+      </div>
+
+      <div class="pago-seguro">
+        <div class="inf">
+          <p>PAGO SEGURO PATROCINADO POR: </p>
+        </div>
+        <div class="container-span">
+          <div><img src="/assets/icons/mastercard.svg" alt="mastercard"></div>
+          <div><img src="/assets/icons/visa.svg" alt="visa"></div>
+          <div><img src="/assets/icons/bitcoin.svg" alt="bitcoin" class="bitcoin"></div>
+          <div><img src="/assets/icons/gpay.svg" alt="visa"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

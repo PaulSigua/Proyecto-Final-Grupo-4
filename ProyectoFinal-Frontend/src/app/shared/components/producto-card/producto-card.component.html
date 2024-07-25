@@ -1,0 +1,14 @@
+<div class="global-container" *ngIf="producto">
+  <a [routerLink]="['/descripcion', producto.codigo]">
+    <div class="contenedor-img">
+      <img src={{producto.imagen}} alt={{producto.nombre}}>
+    </div>
+    <h3 class="name">{{producto.nombre}}</h3>
+    <div class="price-section">
+      <p class="desde">Desde: </p>
+      <span class="price">${{producto.precio}}</span>
+    </div>
+    <div class="discount-tag">{{producto.oferta}}% OFF</div>
+  </a>
+  <button class="add-to-cart-btn" (click)="addDetalleCarrito(producto)">Añadir al carrito</button>
+</div>

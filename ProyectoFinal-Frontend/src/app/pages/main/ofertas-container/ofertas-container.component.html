@@ -1,0 +1,13 @@
+
+<div class="global-container">
+  <div class="nombre">
+    <h1>Ofertas</h1>
+  </div>
+  <button class="left-button" (click)="scrollToLeft()"><i class="fa-solid fa-chevron-left"></i></button>
+  <div class="container-etiquetas" #containerEtiquetas>
+    <div class="carta" *ngFor="let pro of productos">
+      <app-producto-card [producto]="pro"></app-producto-card>
+    </div>
+  </div>
+  <button class="right-button" (click)="scrollToRight()"><i class="fa-solid fa-chevron-right"></i></button>
+</div>

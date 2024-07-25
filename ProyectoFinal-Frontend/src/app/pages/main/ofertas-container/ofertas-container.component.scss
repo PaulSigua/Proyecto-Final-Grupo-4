@@ -1,0 +1,86 @@
+.global-container {
+  position: relative;
+  padding: 0px 70px 0 50px;
+
+  .nombre {
+    margin: 30px 0 20px;
+
+  }
+
+  .container-etiquetas {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    .carta {
+      flex: 0 0 auto;
+      margin-right: 16px;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    scrollbar-width: none;
+  }
+
+  .right-button,
+  .left-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 20px;
+    margin-top: 53px;
+  }
+
+  .right-button {
+    right: 0;
+    margin-right: 15px;
+  }
+
+  .left-button {
+    left: 0;
+    margin-left: 7px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 0px;
+    margin-left: 10px;
+
+    .container-etiquetas {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      grid-gap: 20px;
+
+    }
+
+  }
+}
+
+@media (max-width: 600px) {
+  .nombre {
+    padding-left: 10px;
+    margin: 10px 0 20px;
+
+    h1 {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+
+  .right-button, .left-button{
+    display: none;
+  }
+
+}

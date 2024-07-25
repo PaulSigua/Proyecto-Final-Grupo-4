@@ -1,0 +1,10 @@
+<div class="global-container">
+  <div class="nombre">
+    <h1>Categorias Populares</h1>
+  </div>
+  <div class="container-etiquetas" >
+    <div class="carta" *ngFor="let cat of categorias">
+      <app-categorias-card [categoria]="cat"></app-categorias-card>
+    </div>
+  </div>
+</div>

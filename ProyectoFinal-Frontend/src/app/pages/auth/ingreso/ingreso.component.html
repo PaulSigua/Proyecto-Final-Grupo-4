@@ -1,0 +1,31 @@
+<div class="global-container">
+    <div class="container">
+        <div class="inicio-container">
+            <div class="logo-container">
+                <hr>
+                <img src="assets\logo\logo-ferreteria.png" alt="logo">
+                <hr>
+            </div>
+            <div class="saludo-container">
+                <h1> ¡Hola! <br> Te damos la bienvenida </h1>
+            </div>
+        </div>
+        <div class="formulario-container">
+            <form action="">
+                <div class="email">
+                    <label for="mail" > Email </label>
+                    <input  type="email" name="mail" id="mail" [(ngModel)]="ingreso.email" >
+                </div>
+                <div class="contasena">
+                    <label for="con"> Contraseña </label>
+                    <input type="password" name="con" id="con" [(ngModel)]="ingreso.clave" >
+                </div>
+                <div class="botones-container">
+                    <button type="submit">Olvide mi contraseña</button>
+                    <button class="n" type="submit" routerLink="/home" (click)="ingresarUsuario()">Ingresar</button>
+                    <button type="submit" routerLink="/auth/registro">Registrate</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,147 @@
+a{
+  text-decoration: none;
+}
+.global-container {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 546px;
+  width: 276px;
+  margin: 0;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #C6C5C5;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  flex-direction: column;
+
+
+  @media (max-width: 600px) {
+    width: 165px;
+    height: 403px;
+
+    .contenedor-img {
+      width: 107px;
+      height: 119px;
+      margin-bottom: 0;
+
+      img {
+        width: 80%;
+        height: 80%;
+      }
+    }
+
+    .category {
+      display: none;
+    }
+
+    .name {
+      margin-top: 24px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .price-section {
+      flex-direction: column;
+
+
+      .desde {
+        font-weight: bold;
+        margin-right: 0;
+      }
+
+      .price {
+        font-weight: bold;
+      }
+
+    }
+
+    .discount-tag {
+      font-weight: bold;
+    }
+
+    .add-to-cart-btn {
+      width: 97%;
+    }
+  }
+}
+
+.contenedor-img {
+  width: 256px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #F4F4F4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+
+  img {
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+  }
+
+}
+
+.category {
+  color: #9D9EA2;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+
+.name {
+  color: #000000;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.price-section {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  text-align: center;
+  justify-content: center;
+
+  .desde {
+    font-size: 14px;
+    margin-right: 16px;
+    margin-bottom: 0px;
+    padding-top: 1px;
+  }
+
+  .price {
+    font-size: 16px;
+    color: #ff0000;
+  }
+
+}
+
+.discount-tag {
+  color: #05422c;
+  background-color: #F2F6F4;
+  border-radius: 5px;
+  padding: 3px 7px;
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: 20px;
+  min-width: 72px;
+  min-height: 28px;
+
+}
+
+.add-to-cart-btn {
+  background-color: #4285F4;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  width: 70%;
+  height: 40px;
+}

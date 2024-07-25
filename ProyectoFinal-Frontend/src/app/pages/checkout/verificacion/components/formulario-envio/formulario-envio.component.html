@@ -1,0 +1,52 @@
+<div class="global-container">
+  <div class="tittle">
+    <h1>Direcci&oacute;n de env&iacute;o</h1>
+  </div>
+  <form class="formulario">
+    <form class="datos-cliente-formulario" *ngIf="formulario" [formGroup]="formulario" (ngSubmit)="enviarDatos()">
+      <div class="nombre">
+        <div class="nombre-input-container">
+          <label>NOMBRE *</label>
+          <input type="text" name="nombre" id="nombre" [(ngModel)]="cliente.primerNombre" formControlName="nombre" required>
+        </div>
+        <div class="apellido-input-container">
+          <label>APELLIDO *</label>
+          <input type="text" name="apellido" id="apellido" [(ngModel)]="cliente.primerApellido" formControlName="apellido" required>
+        </div>
+      </div>
+      <div class="pais-select-container">
+        <label>PAIS *</label>
+        <input type="text" name="principal" id="principal" placeholder="Numero de vivienda, calle principal y secundariaa" [(ngModel)]="direccion.nombrePais" formControlName="pais" required>
+      </div>
+      <div class="direccion-container">
+        <label>DIRECCION *</label>
+        <input type="text" name="principal" id="principal" placeholder="Numero de vivienda, calle principal y secundariaa" [(ngModel)]="direccion.direccionPricipal" formControlName="principal" required>
+        <input type="text" name="secundaria" id="secundaria" placeholder="Departamento, Casa, Piso, etc. (opcional)" [(ngModel)]="direccion.direccionSecundaria" formControlName="secundaria" required>
+      </div>
+      <div class="ciudad-inputs-container">
+        <div class="ciudad">
+          <label>CIUDAD *</label>
+          <input type="text" name="ciudad" id="ciudad" [(ngModel)]="direccion.nombreCiudad" formControlName="ciudad" required>
+        </div>
+        <div class="provincia">
+          <label>PROVICIA *</label>
+          <input type="text" name="provincia" id="provincia" [(ngModel)]="direccion.nombreProvincia" formControlName="provincia" required>
+        </div>
+        <div class="codigo-postal">
+          <label>CODIGO POSTAL *</label>
+          <input type="text" name="codigo-postal" id="codigo-postal" [(ngModel)]="direccion.codigoPostal" formControlName="codigoPostal" required>
+        </div>
+      </div>
+      <div class="datos-extras">
+        <div class="celular">
+          <label>NUMERO CELULAR *</label>
+          <input type="text" name="celular" id="celular" [(ngModel)]="cliente.celular" formControlName="celular" required>
+        </div>
+        <div class="correo">
+          <label>CORREO *</label>
+          <input type="email" name="correo" id="correo" [(ngModel)]="cliente.correo" formControlName="correo" required>
+        </div>
+      </div>
+    </form>
+  </form>
+</div>

@@ -1,0 +1,30 @@
+<div class="global-container">
+  <div class="header">
+    <nav class="breadcrumb-container">
+      <div class="steps">
+        <div class="step">
+          <span class="icon"><i class="fa-solid fa-bag-shopping"></i></span>
+          <span class="step-name">Carrito de Compra</span>
+        </div>
+        <div class="step-divider "></div>
+        <div class="step active">
+          <span class="icon"><i class="fa-solid fa-clipboard-check"></i></span>
+          <span class="step-name">Verificación</span>
+        </div>
+        <div class="step-divider"></div>
+        <div class="step">
+          <span class="icon"><i class="fa-solid fa-cart-flatbed"></i></span>
+          <span class="step-name">Orden Completa</span>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="form-precio-container">
+    <div class="formulario">
+      <app-formulario-envio [botonPresionado]="totalConfirmacion.botonPresionado"></app-formulario-envio>
+    </div>
+    <div class="precio">
+      <app-total-confirmacion #totalConfirmacion></app-total-confirmacion>
+    </div>
+  </div>
+</div>

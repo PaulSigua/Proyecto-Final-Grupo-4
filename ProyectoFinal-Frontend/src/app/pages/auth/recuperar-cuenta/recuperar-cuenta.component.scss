@@ -1,0 +1,113 @@
+
+
+
+.global-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1{
+        margin-bottom: 5px;
+        margin-top: 5px;
+        font-family: 'Merriweather', serif;
+        font-weight: 100;
+        font-size: 28px;
+        color: #898989;
+    }
+}
+
+.container{
+    width: 400px;
+    margin: 0 auto;
+}
+
+.inicio-container{
+    margin-bottom: 20px;
+}
+
+.logo-container{
+    text-align: center;
+    hr{
+        display: inline-block;
+        width: 30%;
+        height: auto;
+        margin-bottom: 50px;
+    }
+
+    img{
+        display: inline-block;
+
+    }
+}
+.saludo-container{
+    text-align: center;
+}
+
+.formulario-container{
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    padding: 20px;
+    box-sizing: border-box;
+    label{
+        display: block;
+    }
+    input{
+        box-sizing: border-box;
+        width: 100%;
+    }
+}
+.botones-container{
+    margin: 0 auto;
+    margin-top: 15px;
+
+}
+
+button{
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 15px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.459);
+}
+
+button:active{
+    background-color: #3c3c3c;
+    color: white;
+}
+
+button + button{
+    margin-top: 10px;
+}
+
+label{
+    color: #898989;
+}
+
+input{
+    border: none;
+    border-bottom: 2px solid #898989af;
+    outline: none;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+img{
+    width: 25%;
+    height: 25%;
+}
+
+.n{
+    background-color: black;
+    color: white;
+    box-shadow: 0 0 15px 4px rgba(0,0,0,0.3);
+}
+

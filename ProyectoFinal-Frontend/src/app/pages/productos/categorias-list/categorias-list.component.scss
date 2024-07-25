@@ -1,0 +1,20 @@
+.nombre-clase-css {
+  color: red;
+}
+
+.nombre-clase-css {
+  color: red;
+  font-weight: bold;
+}
+
+/* categorias.component.css */
+li {
+  cursor: pointer;
+  padding: 10px 15px; /* Espaciado interno para mejorar el área clicable */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+li:hover {
+  background-color: #f0f0f0;
+  color: #333; /* Cambia esto según tus necesidades de estilo */
+}

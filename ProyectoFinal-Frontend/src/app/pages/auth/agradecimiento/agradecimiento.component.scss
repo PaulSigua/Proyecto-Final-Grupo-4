@@ -1,0 +1,58 @@
+.global-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inicio-container {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    text-align: center;
+
+    hr {
+        display: inline-block;
+        width: 25%;
+        margin: 0 10px;
+        height: auto;
+        margin-bottom: 0px;
+    }
+
+    img {
+        display: inline-block;
+        width: 25%;
+        height: 25%;
+    }
+}
+
+.saludo-container {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+
+    h1 {
+        box-sizing: border-box;
+        font-weight: 100;
+        font-size: 30px;
+        color: #898989;
+    }
+}
+
+.texto-container {
+    margin-top: 100px;
+    text-align: center;
+    p {
+        box-sizing: border-box;
+        font-weight: 100;
+        font-size: 18px;
+        color: #898989;
+    }
+}
+
+a{
+    color: #898989;
+    text-decoration: none;
+}

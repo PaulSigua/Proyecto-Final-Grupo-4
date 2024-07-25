@@ -1,0 +1,32 @@
+<div class="general-container">
+  <div class="tittle">
+    <h1>Tu orden</h1>
+  </div>
+  <div class="productos-container" *ngIf="factura" >
+    <div class="global-container"  *ngFor="let detalle of factura.detallesList">
+      <div class="img-container">
+        <img src="{{detalle.productos?.imagen}}" alt="iphone">
+      </div>
+      <div class="inf-producto-container">
+        <div class="descripcion-producto">
+          <p>
+            {{detalle.productos?.breveDescripcion}}
+          </p>
+        </div>
+        <div class="cantidad-precio-container">
+          <div class="cantidad-select">
+            <label>{{detalle.cantidad}}</label>
+          </div>
+          <div class="precio-unitario">
+            <p>${{detalle.productos?.precio}}</p>
+          </div>
+        </div>
+        <div class="precio-total">
+          <p>${{detalle.precioTotal}}</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

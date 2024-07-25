@@ -1,0 +1,186 @@
+.global-container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 70px;
+  display: flex;
+  flex-direction: column;
+
+  .subtotal-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    border-bottom: 1px solid #F4F4F4;
+
+    label {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 0;
+      color: red;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+
+  .detalles-envio-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    .detalles-cliente {
+      width: 48%;
+
+      div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 16px;
+
+        span:nth-child(1) {
+          font-size: 14px;
+          color: #9D9EA2;
+        }
+
+        span:nth-child(2) {
+          font-size: 14px;
+          font-weight: 600;
+          color: #000000;
+        }
+      }
+    }
+
+    .detalles-factura {
+      width: 48%;
+
+      div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 16px;
+
+        span:nth-child(1) {
+          font-size: 14px;
+          color: #9D9EA2;
+        }
+
+        span:nth-child(2) {
+          font-size: 14px;
+          font-weight: 600;
+          color: #000000;
+        }
+      }
+    }
+  }
+
+  .total-container {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    border-bottom: 1px solid #F4F4F4;
+    border-top: 1px solid #F4F4F4;
+    align-self: self-end;
+    margin-bottom: 20px;
+
+    label {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 0;
+      color: red;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+
+  .seguir-comprando {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    label {
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: 400;
+      color: #9D9EA2;
+      margin-bottom: 10px;
+    }
+
+    button {
+      margin-bottom: 15px;
+      width: 30%;
+      height: 50px;
+      border-radius: 50px;
+      color: white;
+      background-color: #4285F4;
+      border: none;
+      font-size: 16px;
+      font-weight: 500;
+
+    }
+
+    button:hover {
+      background-color: rgb(172, 47, 197);
+    }
+  }
+
+  @media(max-width: 600px) {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .detalles-envio-container {
+      flex-direction: column;
+      width: 100%;
+      margin-top: 20px;
+
+      .detalles-cliente {
+        width: 100%;
+      }
+
+      .detalles-factura {
+        width: 100%;
+      }
+    }
+
+    .seguir-comprando {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+
+      label {
+        font-size: 16px;
+        font-weight: 400;
+        color: #9D9EA2;
+        margin-bottom: 10px;
+      }
+
+      button {
+        width: 60%;
+        height: 80px;
+        margin-bottom: 15px;
+        border-radius: 50px;
+        color: white;
+        background-color: #4285F4;
+        border: none;
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+}

@@ -1,0 +1,341 @@
+.container {
+  width: 100%;
+}
+
+.global-container {
+  margin-bottom: 100px;
+  @media(max-width: 600px) {
+   margin-bottom: 0px;
+  }
+}
+
+.breadcrumb-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  padding: 10px 0;
+
+  .steps {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 80%;
+
+    .step {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      justify-content: center;
+
+      &.active {
+        .step-name {
+          font-weight: bold;
+          color: black;
+        }
+
+        .icon {
+          background-color: #4285F4;
+
+          i {
+            color: #ffff;
+          }
+        }
+      }
+
+      .icon {
+        margin-right: 5px;
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        border-radius: 20px;
+
+        i {
+          padding-top: 6px;
+          color: #4285F4;
+        }
+      }
+
+      .step-name {
+        font-weight: 400;
+        font-size: 14px;
+        color: #717378;
+      }
+    }
+
+    .step-divider {
+      flex-basis: 100%;
+      height: 1px;
+      background-color: #000000; // Color de los divisores entre pasos
+      margin: 0 10px; // Espaciado alrededor de los divisores
+    }
+  }
+
+  @media(max-width: 600px) {
+    width: 100%;
+    justify-content: start;
+    flex-direction: column;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 0;
+
+    .steps {
+      flex-direction: column;
+      max-width: none;
+      width: 100%;
+
+      .step {
+        justify-content: start;
+        padding: 10px 0 10px 20px;
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+}
+
+.productos-container {
+  margin-top: 10px;
+}
+
+.car-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 45px;
+  padding-top: 45px;
+
+  margin-bottom: 30px;
+
+  .productos-container {
+    width: 70%;
+    margin-left: 135px;
+
+    .tittle {
+      width: 100%;
+      height: 54px;
+      border-bottom: 1px solid #C8C9CB;
+      margin-bottom: 20px;
+
+      h1 {
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+
+    .carrito-card-container {
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #C8C9CB;
+    }
+
+    .indicaciones-envio-container {
+      display: flex;
+      flex-direction: row;
+      margin-top: 30px;
+      justify-content: space-between;
+      width: 100%;
+
+      .envio,
+      .garantia,
+      .reembolso {
+        width: 31%;
+      }
+
+      .titulo {
+        font-size: 16px;
+        color: #4285F4;
+      }
+
+      .descripcion {
+        box-shadow: 0 0 3px #00000029;
+        padding: 10px;
+        border-radius: 10px;
+        height: 100%;
+
+        div {
+          width: 48px;
+          height: 48px;
+          box-shadow: 0 8px 6px -6px #00000029;
+          border-radius: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #4285F4;
+        }
+
+        h4 {
+          margin-top: 12px;
+          font-size: 18px;
+          font-weight: 600;
+        }
+
+        p {
+          font-size: 16px;
+          color: #717378;
+        }
+      }
+
+      .descripcion:nth-child(1) {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  .precio-container {
+    width: 30%;
+    margin-right: 50px;
+    margin-left: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 3px #00000029;
+    padding: 20px;
+    min-height: auto;
+
+    .descripcion-precio-container {
+      div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 16px;
+
+        span:nth-child(1) {
+          font-size: 14px;
+          color: #9D9EA2;
+        }
+
+        span:nth-child(2) {
+          font-size: 14px;
+          font-weight: 600;
+          color: #000000;
+        }
+      }
+
+    }
+
+    .ofertas-cliente {
+      width: 100%;
+      text-align: center;
+
+      p {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 3px;
+      }
+
+      button {
+        border: none;
+        background: none;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: underline;
+      }
+    }
+
+    .verificar-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .verificar-button {
+        width: 90%;
+        height: 60px;
+        border: none;
+        background-color: #C8C9CB;
+        border-radius: 50px;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        margin: 15px 0 15px;
+      }
+    }
+
+    .pago-seguro {
+      width: 100%;
+      border-top: 1px solid #F4F4F4;
+
+      .inf {
+        margin-top: 10px;
+
+        p {
+          font-size: 12px;
+          color: #717378;
+          font-weight: lighter;
+        }
+      }
+
+      .container-span {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+        div {
+          width: 56px;
+          border: 1px solid #F4F4F4;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 10px;
+
+          img {
+            width: 30px;
+          }
+
+          .bitcoin {
+            width: 20px;
+          }
+        }
+      }
+    }
+
+  }
+
+  @media(max-width: 600px) {
+    flex-direction: column;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 30px;
+
+    .productos-container {
+      width: 100%;
+      margin-left: 0px;
+      padding: 20px;
+
+      .tittle {
+        h1 {
+          font-weight: 600;
+        }
+      }
+
+      .indicaciones-envio-container {
+        display: flex;
+        flex-direction: column;
+
+        .envio,
+        .garantia,
+        .reembolso {
+          width: 100%;
+        }
+        .descripcion:nth-child(1) {
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .precio-container {
+      width: 90%;
+      margin-right: 5%;
+      margin-left: 5%;
+      margin-top: 0px;
+      min-height: auto;
+
+      .ofertas-cliente {
+        width: 100%;
+      }
+    }
+  }
+
+}

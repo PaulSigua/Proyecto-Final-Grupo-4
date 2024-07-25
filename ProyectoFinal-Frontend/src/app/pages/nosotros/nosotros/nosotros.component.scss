@@ -1,0 +1,51 @@
+.sobre-nosotros {
+  background-color: #f0f0f0;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.sobre-nosotros .container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.sobre-nosotros h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.sobre-nosotros p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.sobre-nosotros .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.nombres{
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.container-ubicacion {
+  .container-secundary {
+    .container-mapa{
+      img{
+        width: 1000px;
+        transition: transform 0.3s ease-in-out;
+        
+        &:hover {
+          transform: scale(1.2); // Ajusta el valor para controlar el nivel de ampliación
+        }
+      }
+    }
+  }
+}

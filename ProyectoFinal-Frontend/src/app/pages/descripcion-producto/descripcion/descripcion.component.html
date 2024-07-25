@@ -1,0 +1,66 @@
+<div class="global-container" *ngIf="producto">
+  <div class="nombre" id="text">
+    <p>{{producto.nombre}} </p>
+  </div>
+  <div class="container-producto-inf">
+    <div class="container-img">
+      <div class="img-cont">
+        <img src="{{producto.imagen}}" alt="iphone">
+      </div>
+    </div>
+    <div id="presentacion">
+      <div class="cont-img">
+        <button><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="imgs-container">
+          <img src="{{producto.imagen}}" alt="1">
+          <img src="{{producto.imagen}}" alt="1">
+          <img src="{{producto.imagen}}" alt="1">
+        </div>
+        <button><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <div class="inf-producto">
+      <div class="nombre-pro">
+        <p>{{producto.breveDescripcion}}
+        </p>
+      </div>
+      <div class="container-precio">
+        <p>${{producto.precio}}</p>
+      </div>
+      <div class="accion-producto">
+        <div class="cantidad-container">
+          <p>Cantidad</p>
+          <div class="cantidad-select">
+            <button (click)="decrement()">-</button>
+            <input type="number" name="cantidad" [(ngModel)]="cantidad" min="1" pattern="[0-9]*">
+            <button (click)="increment()">+</button>
+          </div>
+        </div>
+        <button class="agregar-producto" (click)="addDetalleCarrito(producto)">Añadir al Carrito<i class="fa-solid fa-cart-plus"
+            style="margin-left: 8px;"></i></button>
+      </div>
+    </div>
+  </div>
+  <div class="container-imgs-prod">
+    <div class="cont-img">
+      <button><i class="fa-solid fa-chevron-left"></i></button>
+      <div class="imgs-container">
+        <img src="{{producto.imagen}}" alt="1">
+        <img src="{{producto.imagen}}" alt="1">
+        <img src="{{producto.imagen}}" alt="1">
+      </div>
+      <button><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </div>
+  <div class="descripcion-container">
+    <div class="tittle">
+      <h1>Informaci&oacute;n del producto</h1>
+    </div>
+    <div class="descripcion">
+      <ul>
+        <li>{{producto.descripcion}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

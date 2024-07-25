@@ -1,0 +1,50 @@
+<div class="global-container" *ngIf="factura">
+  <div class="subtotal-container">
+    <label>SUBTOTAL</label>
+    <p>${{factura.precioSubtotal}}</p>
+  </div>
+
+  <div class="detalles-envio-container">
+    <div class="detalles-cliente">
+      <div class="direccion">
+        <span>Correo Electronico</span>
+        <span>{{factura.cliente?.correo}}</span>
+      </div>
+      <div class="envio">
+        <span>Opciones de Env&iacute;o</span>
+        <span>El mismo dia</span>
+      </div>
+      <div class="metodo-pago">
+        <span>Metodo de Pago</span>
+        <span>Visa</span>
+      </div>
+    </div>
+    <div class="detalles-factura">
+      <div class="subtotal">
+        <span>Subtotal</span>
+        <span>${{factura.precioSubtotal}}</span>
+      </div>
+      <div class="descuento">
+        <span>Descuento</span>
+        <span>$0.00</span>
+      </div>
+      <div class="costo-envio">
+        <span>IVA</span>
+        <span>${{factura.precioIva | number:'1.2-2' }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="total-container">
+    <label>Total</label>
+    <p>${{factura.precioTotal | number:'1.2-2' }}</p>
+  </div>
+
+  <div class="seguir-comprando">
+    <label>
+      Continua explorando en nustra tienda...
+    </label>
+    <button (click)="segirComprando()">
+      Explorar
+    </button>
+  </div>
+</div>
